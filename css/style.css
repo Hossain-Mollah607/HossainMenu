@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+    width:1320px;
+    margin:0 auto;
+}
+
+.header{
+    background:rgba(19, 19, 19, 0.92);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(130, 171, 203, 0.08);
+}
+
+.logomanu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logomanu .logo{
+    width:20%;
+}
+.logomanu .logo img{
+    height:80px;
+    transition:.4s;
+
+}
+
+.logomanu .logo img:hover{
+    transform:scale(1.08);
+    filter:drop-shadow(0 0 12px gold);
+}
+
+.logomanu .menu{
+    width:60%;
+}
+.logomanu .menu ul{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:35px;
+}
+
+.logomanu .menu ul li{
+    position:relative;
+}
+
+.logomanu .menu ul li a{
+    color:#fff;
+    font-size:15px;
+    font-weight:500;
+    display:block;
+    padding:28px 0;
+    transition:.3s;
+    position:relative;
+}
+
+.logomanu .menu ul li>a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:20px;
+    width:0;
+    height:2px;
+    background:#FFD700;
+    transition:.4s;
+}
+
+.logomanu .menu ul li:hover>a{
+    color:#FFD700;
+}
+
+.logomanu .menu ul li:hover>a::after{
+    width:100%;
+}
+
+.dropdown{
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:220px;
+    background:#1e293b;
+    border-radius:10px;
+    overflow:hidden;
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(15px);
+
+    transition:.35s;
+
+    display:flex !important;
+    flex-direction:column;
+    gap:0 !important;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.35);
+}
+
+.dropdown li{
+    width:100%;
+}
+
+.dropdown li a{
+    padding:14px 20px !important;
+    color:#fff;
+}
+
+.dropdown li a::after{
+    display:none;
+}
+
+.dropdown li:hover{
+    background:rgba(255,215,0,.12);
+}
+
+.logomanu .menu ul li:hover>.dropdown{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+.hirebtn{
+    width:20%;
+    padding-left: 70px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 20px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#FFD700,#FFB800);
+    color:#111;
+    font-weight:600;
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(255,215,0,.45);
+}
